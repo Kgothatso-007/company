@@ -1,23 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Abour Us</title>
+        <title>Contact Us</title>
         <meta charset="UTF-08">
         <link href="../css/style.css" rel="stylesheet">
     </head>
     <body>
-        <header>
-            <ul>
-                <li><a href="../index.html">Home Page</a></li>
-                <li><a href="./services.html">Services</a></li>
-                <li class="li-left"><a class="active" href="about.html">About Us</a></li>
-            </ul>
+        <header class="header">
+            <nav class="header-nav">  
+                <section class="container">
+                    <a href="../index.html"><img src="../images/logo.jpg" class="header-logo" alt="logo placeholder"></a>
+                    <div class="nav-links">
+                        <a href="../index.html" class="header-link">Home Page</a>
+                        <a href="./book.html" class="header-link ">Book</a>
+                        <a href="./contact.html" class="header-link active">Contact Us</a>
+                    </div>
+                </section>
+            </nav>
         </header>
-        <section>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, commodi deserunt. Delectus quo id corporis deleniti molestias, ullam autem laudantium laboriosam facilis eaque vel, minima dolores vitae fuga magni facere.
-            </p>
-        </section>
+
+        <main>
+            <section class="contact">
+                <!-- <h1>Contact Us</h1> -->
+                <form class="contact-form">
+                    <section class="form-group">
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" name="first_name" required>
+                    </section>
+                    
+                    <section class="form-group">
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" name="last_name" required>
+                    </section>
+
+                    <section class="form-group span-all">
+                        <label for="email">Email Address</label>
+                        <input type="text" id="email" name="email" required>
+                    </section>
+
+                    <fieldset class="span-all">
+                        <legend>Query Type</legend>
+                        <section class="radio">
+                            <input type="radio" id="general" name="query" value="General Inquiry" required>
+                            <label for="general">General Inquiry</label>
+                        </section>
+
+                        <section class="radio">
+                            <input type="radio" id="support" name="query" value="Support Request" required>
+                            <label for="support">Support Request</label>
+                        </section>
+                    </fieldset>
+
+                    <section class="form-group span-all">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </section>
+
+                    <section class="consent span-all">
+                        <input type="checkbox" id="consent" name="consent" required>
+                        <label for="consent">I consent to being contacted</label>
+                    </section>
+
+                    <section class="form-field span-all">
+                        <button>Submit</button>
+                    </section>
+                </form>
+            </section> 
+        </main>
+        
+        <footer>
+            <p>Copyright © Home Owners - 2025</p>
+        </footer>
+
     </body>
 </html>
 </html>
