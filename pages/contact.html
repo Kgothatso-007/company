@@ -4,6 +4,7 @@
         <title>Contact Us</title>
         <meta charset="UTF-08">
         <link href="../css/style.css" rel="stylesheet">
+        <script src="../javascript/validation.js" defer></script>
     </head>
     <body>
         <header class="header">
@@ -22,20 +23,23 @@
         <main>
             <section class="contact">
                 <!-- <h1>Contact Us</h1> -->
-                <form class="contact-form">
+                <form class="contact-form" novalidate>
                     <section class="form-group">
                         <label for="fname">First Name</label>
-                        <input type="text" id="fname" name="first_name" required>
+                        <input type="text" data-error="First name required" id="fname" name="first_name" required>
+                        <span class="error-message"></span>
                     </section>
                     
                     <section class="form-group">
                         <label for="lname">Last Name</label>
-                        <input type="text" id="lname" name="last_name" required>
+                        <input type="text" data-error="Last name required" id="lname" name="last_name" required>
+                        <span class="error-message"></span>
                     </section>
 
                     <section class="form-group span-all">
                         <label for="email">Email Address</label>
-                        <input type="text" id="email" name="email" required>
+                        <input type="email" data-error="Email address required" id="email" name="email" required>
+                        <span class="error-message"></span>
                     </section>
 
                     <fieldset class="span-all">
@@ -49,20 +53,23 @@
                             <input type="radio" id="support" name="query" value="Support Request" required>
                             <label for="support">Support Request</label>
                         </section>
+                        <span class="error-message"></span>
                     </fieldset>
 
                     <section class="form-group span-all">
                         <label for="message">Message</label>
-                        <textarea id="message" name="message" required></textarea>
+                        <textarea id="message" data-error="Message required" name="message" required></textarea>
+                        <span class="error-message"></span>
                     </section>
 
                     <section class="consent span-all">
-                        <input type="checkbox" id="consent" name="consent" required>
+                        <input type="checkbox" data-error="Consent required" id="consent" name="consent" required>
                         <label for="consent">I consent to being contacted</label>
+                        <span class="error-message"></span>
                     </section>
 
                     <section class="form-field span-all">
-                        <button>Submit</button>
+                        <button id="submit">Submit</button>
                     </section>
                 </form>
             </section> 
