@@ -354,6 +354,15 @@ textarea {
     cursor: pointer;
 }
 
+.error-message {
+    font-size: 10px;
+    color: #f00;
+    margin-top: 10px;
+}
+
+.error-message:empty {
+    display: none;  
+}
 
 
 /* footer ----------------------------------------------------------------*/
